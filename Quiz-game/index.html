@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Quiz game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen active" id="start-screen">
+            <h1> Quiz Game !</h1>
+            <p>Test your brain !</p>
+            <button id="start-button">Start</button>
+
+        </div>
+
+        <div>
+
+            <div class="screen" id="quiz-screen">
+                <div class="header" id="header-quiz">
+                    <h2 id="question"> q1 </h2>
+                    <div class="quiz-info">
+                        <p> Question <span id="current-question">1</span> of <span id="Total-question"> n </span></p>
+                        <p> Score : <span id="score"> 0</span></p>
+
+                    </div>
+
+                </div>
+                <div id="answer-content" class="answer-content">
+
+
+
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress">
+
+                                   
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="screen" id="result-screen">
+            <H1>Results !</H1>
+            <div class="result-score" id="result-score">
+                <p> You scored <span id="final-score"> 0</span> out of <span id="Total-score">n</span></p>
+                <div class="result-msg" id="result-msg">
+
+                </div>
+
+            </div>
+            <div>
+                <button id="restart-button">Restart Quiz</button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+    </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
