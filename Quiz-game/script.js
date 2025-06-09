@@ -113,9 +113,31 @@ function selectAnswer(e){
     const selectedButton = e.target;
     const iscorrect = selectedButton.dataset.correct === "true";
     
-    Array.from
-    
-}
+    Array.from(answerContent.children).forEach(button => {
+      if(button.dataset.correct === "true"){
+        button.classList.add("correct");
+      }
+      else{
+        button.classList.add("incorrect");
+      }
+    });
+    if (iscorrect){
+      score++;
+      current_score.textContent = score;
+
+    }
+  }
+    setTimeout(() => {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < quizQuestions.length)
+      {
+        show_question();
+      }
+      else{
+        show_results();
+      }
+    }
+  ,1000)
 
 
 function restartQuiz(){
