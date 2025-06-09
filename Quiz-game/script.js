@@ -84,8 +84,8 @@ function startQuiz(){
 
 function show_question(){
      answerDisabled = false;
-     const currentQuestion = quizQuestions[currentQuestionIndex].question;
-     question.textContent = currentQuestion;
+     const currentQuestion = quizQuestions[currentQuestionIndex];
+     question.textContent = currentQuestion.question;
      question_numebr.textContent = currentQuestionIndex + 1;
 
     const progress_n = Math.floor((currentQuestionIndex / quizQuestions.length) * 100);
@@ -124,7 +124,7 @@ function selectAnswer(e){
       current_score.textContent = score;
 
     }
-  }
+  
     setTimeout(() => {
       currentQuestionIndex++;
       if (currentQuestionIndex < quizQuestions.length)
@@ -136,6 +136,7 @@ function selectAnswer(e){
       }
     }
   ,1000)
+}
 
 function show_results(){
   screen.classList.remove("active");
@@ -156,8 +157,9 @@ function show_results(){
 }
 
 function restartQuiz(){
-    console.log("Quiz restarted");
+    
     last_screen.classList.remove("active");
+    start_screen.classList.add("active");
     
    
 }
